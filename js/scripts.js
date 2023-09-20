@@ -41,3 +41,16 @@ puntos.forEach((cadaPunto, i) => {
     })
 })
 
+// modal 
+const modal = document.querySelectorAll('.modal');
+const openModal = document.querySelector('.open_modal');
+const closeModal = document.querySelector('.close_modal');
+
+modal.forEach((modal)=> {
+    openModal.addEventListener('click', () => {
+        modal.classList.add('modal-show');
+    });
+    closeModal.addEventListener('click', () => {
+        modal.classList.remove('modal-show');
+    });
+});

@@ -45,14 +45,37 @@
         </div>
         <div class="grid-item">
             <i class="fa-solid fa-envelope-open-text fa-2xl"></i>
-            <h4>Escribinos</h4>
+            <h4><a href="#" class="open_modal">Escribinos</a></h4>
             <p>ventas@electro-5.com.ar</p>
         </div>
         <div class="grid-item">
             <i class="fa-brands fa-whatsapp fa-2xl"></i>
-            <h4>Whatsapp</h4>
+            <h4><a href="">Whatsapp</a></h4>
             <p>Contactate de lunes a viernes de 8:30 a 17:00hs</p>
         </div>
+        </div>
+    </section>
+    <section class="modal">
+        <div class="modal-container">
+            <i class="fa-solid fa-xmark close_modal"></i>
+            <img src="../assets/new-message-e6.svg" alt="modal_img" class="modal_img">
+            <h2 class="modal-title">Contáctanos</h2>
+            <form action="https://formsubmit.co/eb52f1f37725b15bde0b789eb15ceaab" method="POST">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name_label">
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" name="email" id="email_label">
+
+                <label for="subject">Asunto</label>
+                <input type="text" name="subject" id="subject_label">
+
+                <label for="comments">Comentarios</label>
+                <textarea name="comments" id="comments_label" cols="15" rows="3" class="comments_label"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+                <button type="submit" class="btn-modal">Enviar</button>
+            </form>
         </div>
     </section>
     <!-- footer -->

@@ -67,15 +67,17 @@ header .search {
 }
 .searchBox {
     position: relative;
-    right: -100%;
+    left: 100%;
     width: 75%;
+    height: 50px;
     display: flex;
+    margin: 2.2rem 2rem 0 0;
     align-items: center;
     transition: 0.5s ease-in-out;
     opacity: 0;
 }
 .searchBox.active {
-    right: 0;
+    left: 0;
     opacity: 1;
     background-color: #a6dad8;
 }
@@ -136,14 +138,6 @@ header .search {
     max-width: 100%;
 
 }
-/* boton  */
-.btnModal {
-    width: 10rem;
-    height: 2rem;
-    background-color: white;
-    border-radius: 2rem;
-    border: none;
-}
 /* pagina de inicio - productos destacados */
 section.inicio {
     padding: 1rem;
@@ -179,7 +173,6 @@ section.inicio .card-item {
 }
 section.inicio .card-item img {
     width: 100%;
-    /* height: 55%; */
 }
 section.inicio .card-item button {
     border: none;
@@ -222,6 +215,93 @@ section.contacto .grid-item {
     margin: 0rem 2rem;
     width: 20rem;
     height: 10rem;
+}
+section.contacto .grid-item a:visited {
+    color: #f8f7f7;
+    text-decoration: none;
+}
+section.contacto .grid-item a:hover {
+    color: #f8f7f7;
+    text-shadow: 0px 5px 9px rgba(0,0,0,0.3);
+    font-size: 25px;
+    transition: ease-in-out 0.5s;
+}
+section.contacto .grid-item a:link {
+    color: #f8f7f7;
+    text-decoration: none;
+}
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #3333339c;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-show {
+    opacity: 1;
+    pointer-events: unset;
+}
+.modal-container {
+    margin: auto;
+    width: 90%;
+    background-color: #f8f7f7;
+    max-width: 600px;
+    max-height: 100%;
+    border-radius: 6px;
+    padding: 2em 1.5em;
+    display: grid;
+    gap: 1em;
+}
+.modal-container i {
+    color: #000;
+}
+img.modal_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37rem;
+    height: 15rem;
+}
+.modal form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+.modal form input {
+    font-family: 'Montserrat', sans-serif;
+    height: 2rem;
+    padding: 0 .5rem;
+    margin: .5rem 0;
+    border-radius: 6px;
+    border: none;
+}
+.modal form textarea {
+    border: none;
+    max-width: 600px;
+}
+button.btn-modal {
+    margin-top: 1rem;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    border-radius: 6px;
+    z-index: 0;
+    background-color: #f8f7f7;
+    overflow: hidden;
+    border: 2px solid #57cc99;
+    color: #57cc99;
+}
+button.btn-modal:hover {
+    color: #f8f7f7;
+    background-color: #57cc99;
 }
 /* pagina nosotros  */
 .carrousel {
@@ -268,10 +348,10 @@ section.contacto .grid-item {
 /* footer */
 footer {
     width: 100%;
-    position: relative;
     bottom: 0;
     left: 0;
-    padding: 2rem 8%;
+    z-index: 0;
+    padding: 2rem 3rem;
     background-color: rgba(0, 0, 0, 0.548);
     display: flex;
     justify-content: center;
