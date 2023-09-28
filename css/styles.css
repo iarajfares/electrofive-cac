@@ -303,6 +303,15 @@ button.btn-modal:hover {
     color: #f8f7f7;
     background-color: #57cc99;
 }
+/* form error  */
+.error {
+    color: salmon;
+    display: block;
+}
+.invalid {
+    border: 1px solid salmon;
+    box-shadow: 0 0 5px salmon;
+}
 /* pagina nosotros  */
 .carrousel {
     width: 100%;

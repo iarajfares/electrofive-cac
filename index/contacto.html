@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Electro Five</title>
-    <script src="./scripts.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +26,8 @@
             </div>
             <ul class="navigation">
                 <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
@@ -60,18 +59,19 @@
             <i class="fa-solid fa-xmark close_modal"></i>
             <img src="../assets/new-message-e6.svg" alt="modal_img" class="modal_img">
             <h2 class="modal-title">Contáctanos</h2>
-            <form action="https://formsubmit.co/eb52f1f37725b15bde0b789eb15ceaab" method="POST">
+            <form action="https://formsubmit.co/eb52f1f37725b15bde0b789eb15ceaab" method="POST" id="formulario_contacto">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name_label">
-
+                <span></span>
                 <label for="email">Correo Electrónico</label>
                 <input type="email" name="email" id="email_label">
-
+                <span></span>
                 <label for="subject">Asunto</label>
                 <input type="text" name="subject" id="subject_label">
-
+                <span></span>
                 <label for="comments">Comentarios</label>
                 <textarea name="comments" id="comments_label" cols="15" rows="3" class="comments_label"></textarea>
+                <span></span>
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
                 <button type="submit" class="btn-modal">Enviar</button>
@@ -96,7 +96,7 @@
     </footer>
     <!-- scripts -->
     <script src="https://kit.fontawesome.com/3abb26370a.js" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
