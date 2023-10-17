@@ -14,7 +14,7 @@
     <!-- barra de navegacion -->
     <header>
         <i class="fa-solid fa-bars menuToggle"></i>
-        <a href="./index.html" class="logoNav">ELECTRO 5</a>
+        <!-- <a href="./index.html" class="logoNav">ELECTRO 5</a> -->
         <div class="header">
             <div class="searchBox">
                 <input type="text" placeholder="Buscar">
@@ -33,25 +33,102 @@
             </ul>
         </div>
     </header>
-    <!-- footer -->
-    <footer>
-        <img src="../assets/Untitled-PhotoRoom-PhotoRoom.png" alt="LOGO" class="logo">
-        <div class="social-icons-container">
-            <a href="" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <ul class="footer-menu-container">
-            <li class="menu-item">Legal</li>
-            <li class="menu-item">Privacy</li>
-            <li class="menu-item">Shipping</li>
-            <li class="menu-item">Refounds</li>
-        </ul>
-        <span class="copyright">&copy;2023, Electro Five - CaC</span>
-    </footer>
-    <!-- scripts -->
+    <div class="contenedorPrincipalProd">
+        <aside>
+            <div class="headerProd">
+                <a href="./index.html" class="logoNav">ELECTRO 5</a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-solid fa-hand-point-right"></i> Todos los productos</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Smartphones y Smartwatch</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Equipos y Notebooks</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Televisores y Monitores</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Impresoras e Insumos</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Periféricos</button>
+                    </li>
+                    <li>
+                        <button class="botonCategoria"><i class="fa-regular fa-hand-point-right"></i> Placas de Video</button>
+                    </li>
+                    <li>
+                        <a class="botonCarrito" href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito <span class="contador">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h2 class="tituloPrincipal">Todos los productos</h2>
+            <div class="contenedor-productos" id="contenedor-productos"></div>
+        </main>
+    </div>
+    <script>
+        let productos = [
+            {id: 1, nombre: 'Redmi Note 11 4GB 128GB', precio: 132999, img: '../assets/smartphones/xiaomi11.webp', categoria: { marca: 'Xiaomi', categoria: 'Smartphone'}},
+            {id: 2, nombre:'Iphone 15 Pro', precio: 2490000, img:'../assets/smartphones/iphone15.webp', categoria:{ marca:'Apple', categoria: 'Smartphone'}},
+            {id: 3, nombre:'Motorola Edge 20 Pro', precio: 379000, img:'../assets/smartphones/moto20.webp', categoria:{ marca:'Motorola', categoria:''}},
+            {id: 4, nombre:'Samsung Galaxy S23', precio: 699999, img:'../assets/smartphones/s23.webp', categoria:{ marca:'Samsung', categoria:'Smartphone'}},
+            {id: 5, nombre:'Notebook HP 15-ef2514la', precio: 601599, img:'../assets/notebooks/notebookhp.webp', categoria:{ marca:'HP', categoria:'Notebook'}},
+            {id: 6, nombre:'Apple Macbook Air', precio: 697499, img:'../assets/notebooks/macbook.webp', categoria:{ marca:'Apple', categoria:'Notebook'}},
+            {id: 7, nombre:'Notebook Lenovo Ideapad 3', precio: 399999, img:'../assets/notebooks/notebooklenovo.webp', categoria:{ marca:'Lenovo', categoria:'Notebook'}},
+            {id: 8, nombre:'Notebook Noblex N14x1000', precio: 188999, img:'../assets/notebooks/notebooknoblex.webp', categoria:{ marca:'Noblex', categoria:'Notebook'}},
+            {id: 9, nombre:'Xiaomi Smart Band Mi Band 8', precio: 47969, img:'../assets/smartwatch/smartwatchxiaomi.webp', categoria:{ marca:'Xiaomi', categoria:'Smartwatch'}},
+            {id: 10, nombre:'Apple Watch Series 8', precio: 328299, img:'../assets/smartwatch/smartwatchapple.webp', categoria:{ marca:'', categoria:'Smartwatch'}},
+            {id: 11, nombre:'Samsung Galaxy Watch5 Pro', precio: 254999, img:'../assets/smartwatch/smartwatchsamsung.webp', categoria:{ marca:'Samsung', categoria:'Smartwatch'}},
+            {id: 12, nombre:'Motorola Moto Watch 100', precio: 65899, img:'../assets/smartwatch/smartwatchmotorola.webp', categoria:{ marca:'Motorola', categoria:'Smartwatch'}},
+            {id: 13, nombre:'Razer Huntsman V2 Analog', precio: 253973, img:'../assets/perifericos/teclado_razer.webp', categoria:{ marca:'Razer', categoria:'Perifericos'}},
+            {id: 14, nombre:'Auriculares Razer Kraken Kitty', precio: 105999, img:'../assets/perifericos/auriculares_razer.webp', categoria:{ marca:'Razer', categoria:'Perifericos'}},
+            {id: 15, nombre:'Mouse Razer DeathAdder V2', precio: 31499, img:'../assets/perifericos/mouse_razer.webp', categoria:{ marca:'Razer', categoria:'Perifericos'}},
+            {id: 16, nombre:'Mouse Logitech G305', precio: 32399, img:'../assets/perifericos/mouse_logitech.webp', categoria:{ marca:'Logitech', categoria:'Perifericos'}},
+            {id: 17, nombre:'Smart Tv Philips Series 75PUD8516/77', precio: 989900, img:'../assets/monitores y televisores/tv_philips.webp', categoria:{ marca:'Philips', categoria:'Smart Tv'}},
+            {id: 18, nombre:'Smart TV Samsung Series 8 UN75AU8000GCZB', precio: 2053848, img:'../assets/monitores y televisores/tv_samsung.webp', categoria:{ marca:'Samsung', categoria:'Smart Tv'}},
+            {id: 19, nombre:'Smart Tv Noblex Dk32x5050pi Led Hd 32"', precio: 93999, img:'../assets/monitores y televisores/tv_noblex.webp', categoria:{ marca:'Noblex', categoria:'Smart Tv'}},
+            {id: 20, nombre:'Smart Tv Xiaomi Mi Tv', precio: 513929, img:'../assets/monitores y televisores/tv_xiaomi.webp', categoria:{ marca:'Xiaomi', categoria:'Smart Tv'}},
+            {id: 21, nombre:'Monitor Led Samsung 24" 75hz', precio: 97749, img:'../assets/monitores y televisores/monitor_samsung.webp', categoria:{ marca:'Samsung', categoria:'Monitor'}},
+            {id: 22, nombre:'Redragon Jade GM3CS27 27"', precio: 240024, img:'../assets/monitores y televisores/monitor_redragon].webp', categoria:{ marca:'Redragon', categoria:'Monitor'}},
+            {id: 23, nombre:'AMD ASRock Phantom Gaming Radeon RX 560', precio: 129977, img:'../assets/placas de video/phantomgaming_rx560.webp', categoria:{ marca:'ASRock', categoria:'Placa de Video'}},
+            {id: 24, nombre:'Nvidia Gigabyte Aero GeForce RTX 4060', precio: 474999, img:'../assets/placas de video/geforcertx_4060.webp', categoria:{ marca:'Gigabyte', categoria:'Placa de Video'}},
+            {id: 25, nombre:'AMD MSI Radeon RX 5700', precio: 269000, img:'../assets/placas de video/mechradeon_rx5700.webp', categoria:{ marca:'MSI', categoria:'Placa de Video'}},
+            {id: 26, nombre:'MSI GeForce GTX 1650 D6 Ventus XS', precio: 276441, img:'../assets/placas de video/geforcegtx_1650.webp', categoria:{ marca:'MSI', categoria:'Placa de Video'}},
+            {id: 27, nombre:'PC Intel Core i5 8GB SSD480', precio: 253999, img:'../assets/pc/pc_intelCore.webp', categoria:{ marca:'Intel', categoria:'PC Armada'}},
+            {id: 28, nombre:'PC AMD Ryzen 5 5600g 16GB RAM SSD480', precio: 419999, img:'../assets/pc/pc_amdRyzen.webp', categoria:{ marca:'AMD', categoria:'PC Armada'}},
+            {id: 29, nombre:'HP Laser 107w 4ZB78A', precio: 161499, img:'../assets/impresoras e insumos/hpLaser.webp', categoria:{ marca:'HP', categoria:'Impresoras'}},
+            {id: 30, nombre:'Creality 3D Ender-3 V2', precio: 260249, img:'../assets/impresoras e insumos/impresora3d.webp', categoria:{ marca:'Creality 3D', categoria:'Impresoras'}},
+    ];
+
+    const productContainer = document.getElementById('contenedor-productos');
+    function mostrarProductos() {
+        productos.forEach((productos) => {
+            const productoDiv = document.createElement("div");
+            productoDiv.classList.add("producto");
+            productoDiv.innerHTML = `
+            <div class="productoCard">
+                <img class="productoImg" src="${productos.img}" alt="">
+                <div class="productoDetalles">
+                    <h3 class="producto-titulo">${productos.nombre}</h3>
+                    <p>$${productos.precio}</p>
+                    <button class="agregarProducto">Agregar</button>
+                </div>
+            </div>
+
+        `;
+        productContainer.appendChild(productoDiv);
+        });
+    }
+    mostrarProductos();
+    </script>
     <script src="https://kit.fontawesome.com/3abb26370a.js" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

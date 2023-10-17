@@ -10,6 +10,9 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
+a {
+    text-decoration: none;
+}
 /* barra de navegacion  */
 header {
     /* position: relative; */
@@ -150,7 +153,7 @@ section.inicio hr {
     margin: 1rem;
 }
 section.inicio h1 {
-    font-size: 1.8em;
+	font-size: 1.8em;				 
     display: flex;
     margin-bottom: 2rem;
     justify-content: center;
@@ -161,16 +164,17 @@ section.inicio h1 i {
     color: #333;
 }
 section.inicio .grid-container {
-    display: grid;
-    margin: 2rem 0;
-    justify-items: center;
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
 }
 section.inicio .card-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     text-align: center;
+    margin: .5rem;
 }
 section.inicio .card-item img {
     width: 100%;
@@ -189,6 +193,79 @@ section.inicio .card-item button {
 .price {
     color: grey;
     font-size: 22px;
+}
+/* pagina productos  */
+aside {
+    margin-top: 1rem;
+    padding: 0rem 2rem 0rem .5rem;
+}
+aside li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+main {
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0 1.5rem;
+}
+.botonCategoria {
+    background-color: white;
+    width: 15rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    text-align: justify;
+}
+.contenedorPrincipalProd {
+    display: flex;
+}
+
+.headerProd {
+    box-shadow: none;
+    text-align: center;
+}
+.producto {
+    padding: 1rem;
+}
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.productoImg {
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
+}
+.productoDetalles {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #a6dad8;
+    width: 20rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.productoCard {
+    box-shadow: -1px -3px 10px -6px rgba(0,0,0,0.61);
+}
+.agregarProducto {
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+.agregarProducto:hover {
+    background-color: white;
+    color: orange;
+    border: 1px solid white;
+    transition: all .5s;
 }
 /* pagina de contacto */
 section {
@@ -212,6 +289,7 @@ section.contacto .grid-item {
     align-items: center;
     justify-content: center;
     background-color: #48a1a17a;
+    box-shadow: 12px 11px 21px -7px rgba(0,0,0,0.29);
     padding: 3rem 1rem;
     margin: 0rem 2rem;
     width: 20rem;
@@ -243,6 +321,7 @@ section.contacto .grid-item a:link {
     display: flex;
     opacity: 0;
     pointer-events: none;
+    transition: all .6s;
 }
 .modal-show {
     opacity: 1;
@@ -304,6 +383,15 @@ button.btn-modal:hover {
     color: #f8f7f7;
     background-color: #57cc99;
 }
+/* form error  */
+.error {
+    color: salmon;
+    display: block;
+}
+.invalid {
+    border: 1px solid salmon;
+    box-shadow: 0 0 5px salmon;
+}
 /* pagina nosotros  */
 .carrousel {
     width: 100%;
@@ -346,7 +434,6 @@ button.btn-modal:hover {
 .carrousel .point.active {
     background-color: #247B7B;
 }
-
 /* PÁGINA NOSOTROS */
 
 section.nosotros {
@@ -402,18 +489,6 @@ section.nosotros h1 i {
     color:#666;
     padding:1rem 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 footer {
@@ -530,6 +605,4 @@ footer {
     div.grid-item {
         margin-top: 2rem;
     }
-    /* footer  */
-
 }
