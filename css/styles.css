@@ -208,7 +208,8 @@ main {
     border-radius: 2rem;
     padding: 0 1.5rem;
 }
-.botonCategoria {
+aside a.botonCategoria {
+    display: flex;
     background-color: white;
     width: 15rem;
     border: none;
@@ -266,6 +267,9 @@ main {
     color: orange;
     border: 1px solid white;
     transition: all .5s;
+}
+.ct-itemActive {
+    color: black;
 }
 /* pagina de contacto */
 section {

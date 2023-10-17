@@ -1,4 +1,5 @@
-// buscador
+document.addEventListener("DOMContentLoaded", function() {
+    // buscador
 let searchBtn = document.querySelector('.searchBtn');
 let closeBtn = document.querySelector('.closeBtn');
 let searchBox = document.querySelector('.searchBox');
@@ -17,7 +18,7 @@ closeBtn.onclick = function(){
 }
 menuToggle.onclick = function(){
     header.classList.toggle('open');
-}
+};
 
 // carrousel de imagenes 
 const contenedor = document.querySelector('.contenedor-fotos');
@@ -39,8 +40,7 @@ puntos.forEach((cadaPunto, i) => {
         // añadir la clase activo al punto clickeado
         cadaPunto.classList.add('active');
     })
-})
-
+});
 // modal 
 const modal = document.querySelectorAll('.modal');
 const openModal = document.querySelector('.open_modal');
@@ -100,3 +100,4 @@ subjectField.addEventListener("blur", (e) => validateEmptyField("Este campo no p
 commentsField.addEventListener("blur", (e) => validateEmptyField("Este campo no puede estar vacío", e));
 
 emailField.addEventListener("input", validateEmailFormat);
+});
