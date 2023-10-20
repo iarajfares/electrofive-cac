@@ -438,8 +438,6 @@ button.btn-modal:hover {
 .carrousel .point.active {
     background-color: #247B7B;
 }
-/* PÁGINA NOSOTROS */
-
 section.nosotros {
     padding: 1rem;
 }
@@ -461,39 +459,42 @@ section.nosotros h1 i {
     margin: 0 1rem;
     color: #333;
 }
-
-
 .nosotros{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .nosotros .image{
     flex:1 1 40rem;
 }
-
 .nosotros .image img{
     height:40vh;
     width:auto;
 }
-
 .nosotros .caja-contenido{
     flex:1 1 40rem;
 }
-
 .nosotros .caja-contenido h3{
     font-size: 3.5rem;
     color:#666;
 }
-
 .nosotros .caja-contenido p{
     font-size: 1.5rem;
     color:#666;
     padding:1rem 0;
 }
-
+.googleMaps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+#map {
+    width: 60rem;
+    height: 40rem;
+}
 /* footer */
 footer {
     width: 100%;
