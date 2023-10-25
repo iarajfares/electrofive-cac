@@ -101,3 +101,18 @@ commentsField.addEventListener("blur", (e) => validateEmptyField("Este campo no 
 
 emailField.addEventListener("input", validateEmailFormat);
 });
+// FAQS
+const preguntas = document.querySelectorAll(".preguntaEncabezado");
+
+preguntas.forEach((pregunta) => {
+pregunta.addEventListener("click", () => {
+		removerClaseActivo();
+	 pregunta.nextElementSibling.classList.add("activo");
+	});
+});
+
+function removerClaseActivo() {
+	preguntas.forEach((pregunta) => {
+		pregunta.nextElementSibling.classList.remove("activo");
+	});
+}
